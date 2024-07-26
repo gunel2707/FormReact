@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "gunel"
+    },
+    {
+      "id": "87a9",
+      "email": "dcsfvb@dcv",
+      "name": "qwer",
+      "surname": "sdvfbgnhnm",
+      "password": "123",
+      "confirmPassword": "123",
+      "rule": true
+    }
+  ]
+}
