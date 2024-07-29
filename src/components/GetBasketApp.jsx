@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect, useState } from "react";
 import Context from "./context/Context";
 // import "./App.css";
@@ -11,10 +10,7 @@ import Header from "./components/Header";
 import Basket from "./pages/Basket";
 import NotFound from "./pages/NotFound";
 
-import './App.css'
-import SignIn from './components/SignIn'
-
-function App() {
+function GetBasketApp() {
   useEffect(() => {
     getdata();
   }, []);
@@ -43,13 +39,13 @@ function App() {
 
   return (
     <>
-    <Context.Provider value={data}>
+      <Context.Provider value={data}>
+        <Header />
 
         <Routes>
-          <Route path="/" element={<SignIn/>}/>
-          <Route path="/products" element={<Products />} />
+          <Route path="/" element={<Products />} />
           <Route path="/shoppingcard" element={<Basket/>} />
-          <Route path="/products/productdetail/:id" element={<ProductDetails />} />
+          <Route path="/productdetail/:id" element={<ProductDetails />} />
           
           <Route path="*" element={<NotFound/>} />
         </Routes>
@@ -57,6 +53,5 @@ function App() {
     </>
   );
 }
-   
 
-export default App
+export default GetBasketApp;

@@ -1,13 +1,100 @@
-
-
 body{margin:0;
   padding:0;
-  display:flex;
-  justify-content:center;
-  align-items: center;
-  height: 100vh;}
-  input-wrapper{
-    margin-bottom: 10px;
-    font-size: 20px;
+  background: linear-gradient(90deg, #da61ff, #0062ff);
+ 
+ 
+
   }
-  .error{color:red;}
+  form{display: flex;
+  align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+width:100%;
+}
+  
+  .content{display:flex;
+    /* align-items: center;
+    justify-content: space-around;*/
+    margin: auto; 
+    gap: 300px;
+    margin-top: 50px;
+/* margin-left: 400px; */
+ 
+  
+    }
+   
+ 
+  .input-wrapper{
+    margin-bottom: 10px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier;
+  }
+  .input-wrapper input {
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    padding: 10px;
+    border-style: none;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .footer{display: flex;
+  flex-direction: row-reverse;
+align-items: center;
+justify-content: center;}
+
+  .content-footer p{
+    /* margin-left: 240px; */
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+   /* .footer{margin-left: 220px;} */
+   .footer input{width: 30px;
+  height:30px;}
+  .error{color:red;
+    font-style: italic;
+  font-size: 20px;
+font-family: 'Times New Roman', Times, serif;}
+.submitBtn{display: flex;
+border-radius: 20px;
+font-size: 30px;
+font-weight: bold;
+text-align: center;
+font-family: 'Courier New', Courier;
+background-color:#0062ff;
+color: white;
+margin-left: 600px;
+margin-bottom: 50px;
+box-shadow: 10px 10px 5px 0px rgba(72, 77, 77, 0.75);
+border-color:white;
+border: solid 2px;}
+.submitBtn:hover{background-color:green;
+  color:white;
+}
+
+@media only screen and (max-width:837){
+  form{display: flex; background-color: red;
+  flex-direction: column;}
+  .content{display:flex;
+    flex-wrap: wrap;
+    float:left;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto; 
+    
+
+/* margin-left: 400px; */
+   
+  
+    }
+   
+}
