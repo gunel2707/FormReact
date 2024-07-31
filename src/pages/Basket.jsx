@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Context from "../context/Context";
 import { Card } from "react-bootstrap";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import Header from "../components/Header";
 
 const Basket = () => {
     const { count, array, setarray, setCount } = useContext(Context);
@@ -42,10 +43,11 @@ const Basket = () => {
 
   return (
     <>
+    <Header/>
       {array.map((item, index) => (
         <Card
           key={index}
-          className="col-md-12  "
+          className="col-md-12  mt-5 m-auto bg-light p-5"
           style={{ height: "19rem", width: "28rem" }}
         >
           <div className="d-flex justify-content-between">
@@ -94,12 +96,12 @@ const Basket = () => {
         </Card>
         
       ))}
-      { <p>
-            <b>Total amount:</b>
+      { <p style={{display:"flex", margin:"auto", justifyContent:"center"} }>
+            <b>Total amount:
 
             {array.reduce((sum, item) => {
               return parseInt(sum + item.price * item.counter);
-            }, 0)}
+            }, 0)}</b>
           </p>}
     </>
   );

@@ -4,9 +4,9 @@ import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
 import Context from "../context/Context";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import Header from "../components/Header";
 const ShoppingCard = () => {
-
-  console.log('modal');
+  console.log("modal");
   const { count, array, setarray, setCount, modalshow, setmodalshow } =
     useContext(Context);
 
@@ -42,7 +42,7 @@ const ShoppingCard = () => {
     let filteredArray = array.filter((item) => obj.id != item.id);
     console.log(filteredArray);
     localStorage.setItem("array", JSON.stringify(filteredArray));
-    
+
     setCount(count - 1);
     setarray(filteredArray);
   }
@@ -55,6 +55,7 @@ const ShoppingCard = () => {
         </Modal.Header>
         <Modal.Body>
           <div className="row gap-5">
+      <Header />
             {" "}
             {array.map((item, index) => (
               <Card
@@ -111,11 +112,12 @@ const ShoppingCard = () => {
         </Modal.Body>
         <Modal.Footer>
           <p>
-            <b>Total amount:</b>
-
-            {array.reduce((sum, item) => {
-              return parseInt(sum + item.price * item.counter);
-            }, 0)}
+            <b>
+              Total amount:
+              {array.reduce((sum, item) => {
+                return parseInt(sum + item.price * item.counter);
+              }, 0)}
+            </b>
           </p>
 
           <Button variant="secondary" onClick={handleClose}>

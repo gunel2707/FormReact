@@ -47,7 +47,7 @@ const Products = () => {
           {count}
         </sup>
       </p>
-      <div className="row  m-auto gap-5  ">
+      <div className="row  m-auto gap-5 bg-product ">
         {productsData.map((item, index) => (
           <Card
             key={index}

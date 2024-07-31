@@ -7,7 +7,7 @@ import Products from "./pages/Products";
 
 import ProductDetails from "./pages/ProductDetails";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
+
 import Basket from "./pages/Basket";
 import NotFound from "./pages/NotFound";
 
@@ -25,11 +25,11 @@ function App() {
   const [modalshow, setmodalshow] = useState(false);
 
   async function getdata() {
-    const request = await axios.get("https://fakestoreapi.com/products");
+    const request = await axios.get(apiKey1);
     
     setproductsData(request.data);
   }
-
+  const apiKey1 = import.meta.env.VITE_API_KEY1;
   const data = {
     productsData,
     setproductsData,

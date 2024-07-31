@@ -48,92 +48,87 @@ const SignIn = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="content">
-          {" "}
-          <div>
-            <div className="input-wrapper">
-              <label htmlFor="name">Adiniz:</label> <br />
-              <input
-                type="text"
-                id="name"
-                placeholder="Adinizi daxil edin..."
-                value={values.name}
-                onChange={handleChange}
-              />
-              {errors.name && <div className="error">{errors.name}</div>}
-            </div>
-
-            <div className="input-wrapper">
-              <label htmlFor="surname">Soyadiniz:</label> <br />
-              <input
-                type="text"
-                id="surname"
-                placeholder="Soyadinizi daxil edin..."
-                value={values.surname}
-                onChange={handleChange}
-              />
-              {errors.surname && <div className="error">{errors.surname}</div>}
-            </div>
-
-            <div className="input-wrapper">
-              <label htmlFor="email">Emailiniz:</label> <br />
-              <input
-                type="text"
-                id="email"
-                placeholder="Emailinizi daxil edin..."
-                value={values.email}
-                onChange={handleChange}
-              />
-              {errors.email && <div className="error">{errors.email}</div>}
-            </div>
+     
+         <div className="content"> <div className="input-wrapper">
+            <label htmlFor="name">Adiniz:</label> <br />
+            <input
+              type="text"
+              id="name"
+              placeholder="Adinizi daxil edin..."
+              value={values.name}
+              onChange={handleChange}
+            />
+            {errors.name && <div className="error">{errors.name}</div>}
           </div>
-          <div>
-            <div className="input-wrapper">
-              <label htmlFor="phone">Telefon nomreniz:</label> <br />
-              <input
-                type="phone"
-                id="phoneNumber"
-                placeholder="Telefon nomresini daxil edin..."
-                value={values.phoneNumber}
-                onChange={handleChange}
-              />
-              {errors.phoneNumber && (
-                <div className="error">{errors.phoneNumber}</div>
-              )}
-            </div>
-            <div className="input-wrapper">
-              <label htmlFor="password">Password:</label> <br />
-              <input
-                type="password"
-                id="password"
-                placeholder="Sifrenizi daxil edin..."
-                value={values.password}
-                onChange={handleChange}
-              />
-              {errors.password && (
-                <div className="error">{errors.password}</div>
-              )}
-            </div>
-            <div className="input-wrapper">
-              <label htmlFor="confirmPassword">Confirm Password:</label> <br />
-              <input
-                type="password"
-                id="confirmPassword"
-                placeholder="Sifrenizi tekrar daxil edin..."
-                value={values.confirmPassword}
-                onChange={handleChange}
-              />
-              {errors.confirmPassword && (
-                <div className="error">{errors.confirmPassword}</div>
-              )}
-            </div>
-          </div>{" "}
-        </div>
+
+          <div className="input-wrapper">
+            <label htmlFor="surname">Soyadiniz:</label> <br />
+            <input
+              type="text"
+              id="surname"
+              placeholder="Soyadinizi daxil edin..."
+              value={values.surname}
+              onChange={handleChange}
+            />
+            {errors.surname && <div className="error">{errors.surname}</div>}
+          </div>
+
+          <div className="input-wrapper">
+            <label htmlFor="email">Emailiniz:</label> <br />
+            <input
+              type="text"
+              id="email"
+              placeholder="Emailinizi daxil edin..."
+              value={values.email}
+              onChange={handleChange}
+            />
+            {errors.email && <div className="error">{errors.email}</div>}
+          </div>
+       
+     
+          <div className="input-wrapper">
+            <label htmlFor="phone">Telefon nomreniz:</label> <br />
+            <input
+              type="phone"
+              id="phoneNumber"
+              placeholder="Telefon nomresini daxil edin..."
+              value={values.phoneNumber}
+              onChange={handleChange}
+            />
+            {errors.phoneNumber && (
+              <div className="error">{errors.phoneNumber}</div>
+            )}
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="password">Password:</label> <br />
+            <input
+              type="password"
+              id="password"
+              placeholder="Sifrenizi daxil edin..."
+              value={values.password}
+              onChange={handleChange}
+            />
+            {errors.password && <div className="error">{errors.password}</div>}
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="confirmPassword">Confirm Password:</label> <br />
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Sifrenizi tekrar daxil edin..."
+              value={values.confirmPassword}
+              onChange={handleChange}
+            />
+            {errors.confirmPassword && (
+              <div className="error">{errors.confirmPassword}</div>
+            )}
+          </div>
+      </div>
         <div className="content-footer">
-          {" "}
-          <p>Cinsiyyetiniz:</p>{" "}
+       
+          <p>Cinsiyyetiniz:</p>
           <div className="input-wrapper footer">
-            <label htmlFor="kisi">Kisi</label> <br />
+            <label htmlFor="kisi">Kisi</label> 
             <input
               type="radio"
               name="gender"
@@ -144,7 +139,7 @@ const SignIn = () => {
             {errors.gender && <div className="error">{errors.gender}</div>}
           </div>
           <div className="input-wrapper footer">
-            <label htmlFor="qadin">Qadin </label> <br />
+            <label htmlFor="qadin">Qadin </label> 
             <input
               type="radio"
               name="gender"
@@ -155,7 +150,7 @@ const SignIn = () => {
             {errors.gender && <div className="error">{errors.gender}</div>}
           </div>
           <div className="input-wrapper footer">
-            <label htmlFor="rule">Men robot deyilem!</label> <br />
+            <label htmlFor="rule">Men robot deyilem!</label> 
             <input
               type="checkbox"
               id="rule"

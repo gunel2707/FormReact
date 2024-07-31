@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Context from "../context/Context";
 import { useParams } from "react-router-dom";
 import "../pages/Product.css";
+import Header from "../components/Header";
 const ProductDetails = () => {
   const {
     productsData,
@@ -17,7 +18,7 @@ const ProductDetails = () => {
   console.log(findProduct);
   console.log(id);
   return (
-    <>
+    <><Header/>
       {findProduct ? (
         <>
           <div className="myDiv"><div className="Productdetailcontent">

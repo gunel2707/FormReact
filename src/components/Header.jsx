@@ -70,7 +70,7 @@ const Header = () => {
           <Nav className="me-auto gap-5 fs-2 fw-bold text-decoration-none text-mmonospace d-flex align-items-center justify-content-center" >
             <Link 
              to="/products"
-              className= {  tabActive=="tab1" ? 'bg-secondary text-light text-decoration-none ' : 'text-light text-decoration-none'}
+              className= {  tabActive=="tab1" ? ' text-danger text-decoration-none ' : 'text-light text-decoration-none'}
               onClick={()=>setTabActive('tab1')}
               >
              {/* className="text-decoration-none text-light">
@@ -79,7 +79,7 @@ const Header = () => {
             </Link>
           
             <Link
-              className= { tabActive=="tab2" ? 'bg-secondary text-light text-decoration-none ' : 'text-light text-decoration-none'}
+              className= { tabActive=="tab2" ? ' text-danger text-decoration-none ' : 'text-light text-decoration-none'}
               to="/shoppingcard"
               onClick={()=>setTabActive('tab2')}
             >

@@ -1,12 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    /* background-color:aquamarine; */
+    
   }
   
   /* .shopping-cart{
       margin-left:1150px;
   } */
+   .bg-product{background-color:aquamarine;}
   .modal-content{overflow: hidden;}
   .card-body-basket{display:flex;
   flex-direction: row;}
